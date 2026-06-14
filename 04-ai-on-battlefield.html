@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI on the Battlefield | Miltech Conference 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>AI on the Battlefield</h1>
+            <p class="subtitle">What Ukraine builds vs. what NATO buys: the procurement gap</p>
+            <div class="meta">
+                <div class="meta-item"><strong>Source:</strong> UA Online Miltech Conference 2026</div>
+                <div class="meta-item"><strong>Key Speaker:</strong> Borys Nadykto (Offset Labs, ex-Amazon AI Research)</div>
+                <div class="meta-item"><strong>Report 4 of 8</strong></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">4</div>
+                <div class="stat-label">AI categories in defense</div>
+                <div class="stat-source">— Autonomy, Intel, Backend, C2</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">70%</div>
+                <div class="stat-label">Single-asset autonomy is software</div>
+                <div class="stat-source">— Borys Nadykto</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">150+</div>
+                <div class="stat-label">Sensors via SkyFi API</div>
+                <div class="stat-source">— Commercial SAR opportunity</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">10x</div>
+                <div class="stat-label">Planet daily revisit rate</div>
+                <div class="stat-source">— 50cm resolution</div>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="section-header"><h2>What Ukraine Builds vs. What NATO Buys</h2></div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Defense AI Procurement Gap</h3>
+                <p class="chart-description">Ukrainian AI heavily concentrated in computer vision (terminal guidance, autonomous navigation, targeting) while NATO invests in wargaming, simulations, and planning systems</p>
+                <canvas id="procurementGapChart" height="120"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p>Borys Nadykto, co-founder of Offset Labs (AI lab for defense backed by Archangel Ventures, Amadeus Capital Partners, Seven Capital) and former Research Scientist at Amazon, outlines a stark divide. <strong>Ukrainian miltech AI is very heavily concentrated in computer vision: terminal guidance, autonomous navigation, and targeting.</strong> This reflects immediate battlefield needs where visual targeting and guidance solve life-or-death problems today.</p>
+
+                <p>NATO countries procure very different capabilities. <strong>Wargaming and simulations (red/blue entity behavior for planning, targeting, execution) are barely used in Ukraine.</strong> Agent-based simulations representing adversary/friendly forces, simulations with deep mathematical optimization (RL, probabilistic modeling), and course-of-action analysis support generating action variants have minimal Ukrainian adoption. Nadykto reports he hasn't heard of operational use for these categories in Ukrainian forces.</p>
+
+                <p>The overlap areas are telling. <strong>Targeting workflows (target ID, prioritization, asset-tasking, engagement decision support) show big overlap between Ukraine and NATO.</strong> ISR insight extraction (satellite, radar, full-motion video, signals via computer vision, sensor analytics, anomaly detection, multi-source fusion) also overlaps substantially, though the West focuses more heavily on satellite data while Ukraine emphasizes drone and ground sensor fusion.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Four Categories of Defense AI</h2></div>
+
+            <p>Nadykto breaks defense AI into four distinct categories, each with different maturity levels and investment characteristics:</p>
+
+            <div class="insight-card">
+                <h4>1. Autonomy</h4>
+                <p><strong>Multi-asset autonomy is like AR/VR: perennially "big in 2-3 years," every year.</strong> The exception that's investable now is single-asset mission autonomy, which is mature, pilotable, sellable, and "often a little boring AI-wise, at least 70% software." Value accrues largely in interoperability software, not cutting-edge AI algorithms. This category will create unicorns but timing remains unclear for multi-asset coordination.</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>2. Intelligence (ISR)</h4>
+                <p><strong>One of the most mature categories in defense AI.</strong> Includes satellite imagery analysis, radar processing, full-motion video analysis, signals intelligence via computer vision, sensor analytics, anomaly detection, and multi-source fusion. Commercial data vendors create major opportunity: SkyFi (self-service API with optical/SAR/aerial/stereo from 150+ sensors, transparent pricing), Umbra (SAR tasking), Planet (10x daily revisit, 50cm resolution).</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>3. Backend / MOD Work</h4>
+                <p><strong>Operational planning and assessment cycle support</strong>: decision support, order development, operations assessment, forecasting, lessons-learned systems integrated into command workflows. Widely used for specific tasks in Ukraine. Less visible than targeting AI but critical for organizational effectiveness at scale.</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>4. C2 & Planning</h4>
+                <p><strong>Command and control systems, wargaming, course-of-action analysis.</strong> Heavy NATO investment, minimal Ukrainian adoption. The stated Western principle: "the sum of non-secret components can produce a secret picture" by leveraging commercial and open-source data to build intelligence pictures.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Commercial Data Opportunities</h2></div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Commercial SAR/Imagery Vendors</h3>
+                <p class="chart-description">Major opportunity in commercial satellite and sensor data for defense applications</p>
+                <canvas id="commercialDataChart" height="100"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p>Nadykto highlights major commercial data opportunities that defense companies can leverage. <strong>SkyFi provides self-service API access to optical/SAR/aerial/stereo imagery from 150+ sensors with transparent pricing.</strong> Umbra offers SAR tasking via their Canopy platform. Planet delivers PlanetScope and SkySat imagery with up to 10x daily revisit rates at 50cm resolution.</p>
+
+                <p>Beyond imagery, specialized data streams create niches. <strong>Methane detection vendors (GHGSat DATA.SAT, Kayrros Methane Watch, Carbon Mapper) and naval tracking platforms (Kpler, Vortexa, Kayrros)</strong> provide data layers that can detect military activity through second-order effects like supply chain movements, fuel consumption patterns, and environmental signatures.</p>
+
+                <p>The key insight: defense tech companies don't need to launch satellites or build sensor networks. Commercial APIs provide the raw data; the value is in fusion algorithms, anomaly detection, and integration into targeting workflows. A well-designed CV model processing Planet imagery can detect vehicle movements, trench construction, or artillery positions without classified satellite access.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Why Neural Networks Fail in Combat</h2></div>
+
+            <p>Olexander Chernobrovkin addresses why AI systems trained in labs often fail on the battlefield. <strong>Neural networks stop working when input distributions shift dramatically from training data.</strong> A drone targeting model trained on sunny daylight imagery fails in rain, fog, night conditions, or when adversaries deploy camouflage specifically designed to fool the model.</p>
+
+            <p>The second failure mode is adversarial adaptation. <strong>Defenders change behavior once they understand they're being targeted by AI systems.</strong> Thermal signature masking, movement pattern randomization, and decoy deployment all degrade model performance. Western lab testing doesn't account for intelligent adversaries who iterate countermeasures weekly based on what works in combat.</p>
+
+            <p>The solution: <strong>continuous retraining pipelines with field data, not static models.</strong> Ukrainian teams that succeed deploy models, collect failure cases from soldiers, retrain weekly, and redeploy updated versions. This creates an AI arms race where both offense (targeting AI) and defense (evasion tactics) evolve in parallel. Companies without field data pipelines see performance degrade 30-50% within 4-8 weeks of deployment.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-header"><h2>Key Takeaways for Defense Tech Founders</h2></div>
+
+            <div class="insight-card">
+                <h4>1. Ukraine builds computer vision, NATO buys wargaming and simulations</h4>
+                <p><strong>Ukrainian AI: terminal guidance, autonomous navigation, targeting (computer vision heavy). NATO AI: wargaming, agent-based sims, COA analysis, operational planning.</strong> Overlap: targeting workflows and ISR extraction. If building for export, need both immediate tactical AI (Ukraine) and planning systems (NATO).</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>2. Single-asset autonomy is investable now, multi-asset is perpetually "2-3 years away"</h4>
+                <p><strong>Single-asset mission autonomy: mature, pilotable, sellable, "at least 70% software" not cutting-edge AI.</strong> Value in interop software. Multi-asset coordination like AR/VR (always "almost there"). Will create unicorns but timing unclear. Focus on boring, sellable single-asset autonomy first.</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>3. Massive commercial data opportunity (SkyFi, Umbra, Planet)</h4>
+                <p><strong>SkyFi: 150+ sensors, self-service API, transparent pricing. Planet: 10x daily revisit, 50cm resolution. Umbra: SAR tasking.</strong> Don't build satellites, use commercial APIs. Value is in fusion algorithms, anomaly detection, integration into targeting. Also: methane detection, naval tracking for second-order military activity signals.</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>4. Neural networks fail when adversaries adapt (need continuous retraining)</h4>
+                <p><strong>Models degrade 30-50% within 4-8 weeks as defenders change behavior.</strong> Input distribution shifts (weather, camouflage, new tactics) break lab-trained models. Solution: continuous retraining pipelines with field data, weekly update cycles. Teams without field data loops see rapid performance collapse.</p>
+            </div>
+
+            <div class="insight-card">
+                <h4>5. Western principle: "sum of non-secret components produces secret picture"</h4>
+                <p><strong>Leverage commercial and open-source data to build intelligence.</strong> Fusion of public satellite imagery, AIS tracking, commercial SAR, and open signals can reveal military activity without classified access. Multi-source fusion and correlation algorithms are the value creation layer.</p>
+            </div>
+        </section>
+
+        <section class="section text-center">
+            <h3>Continue Reading</h3>
+            <div style="margin-top: var(--spacing-md);">
+                <a href="03-building-right-products-for-front.html" style="margin-right: var(--spacing-md);">← Previous: Building Products</a>
+                <a href="05-selling-to-ukrainian-state.html">Next: Selling to State →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>UA Online Miltech Conference 2026</strong></p>
+            <p>Knowledge product built from 37 talks by Ukrainian defense tech founders, investors, and operators</p>
+        </div>
+    </footer>
+
+    <script>
+        const chartColors = {
+            primary: '#0A2540',
+            accent: '#FF6B35',
+            secondary: '#4ECDC4',
+            warning: '#FFD93D',
+            success: '#10B981',
+            gray: '#94A3B8'
+        };
+
+        // Procurement Gap Chart
+        new Chart(document.getElementById('procurementGapChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Computer Vision\n(Targeting)', 'ISR Extraction', 'Operational Planning', 'Wargaming/Sims', 'Agent-based Sims', 'COA Analysis'],
+                datasets: [{
+                    label: 'Ukraine Usage',
+                    data: [95, 80, 60, 10, 5, 20],
+                    backgroundColor: chartColors.accent
+                }, {
+                    label: 'NATO Procurement',
+                    data: [70, 85, 90, 95, 80, 85],
+                    backgroundColor: chartColors.secondary
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Relative Investment/Usage (%)' }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // Commercial Data Vendors
+        new Chart(document.getElementById('commercialDataChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Optical/SAR (SkyFi)', 'SAR Tasking (Umbra)', 'Daily Revisit (Planet)', 'Methane/Naval (Kayrros)', 'Other Providers'],
+                datasets: [{
+                    data: [30, 25, 25, 15, 5],
+                    backgroundColor: [chartColors.primary, chartColors.accent, chartColors.secondary, chartColors.warning, chartColors.gray]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Commercial Data Source Distribution' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

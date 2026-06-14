@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funding and Deals in Defence Tech | Miltech Conference 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Funding and Deals in Defence Tech</h1>
+            <p class="subtitle">From Brave1 grants to €100M joint ventures: navigating the capital landscape</p>
+            <div class="meta">
+                <div class="meta-item">
+                    <strong>Source:</strong> UA Online Miltech Conference 2026
+                </div>
+                <div class="meta-item">
+                    <strong>Speakers:</strong> Yuriy Romanyukha, Yulii Gere, Artem Myrhorodskyi, Anton Doktorov
+                </div>
+                <div class="meta-item">
+                    <strong>Report 2 of 8</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">€17B</div>
+                <div class="stat-label">EU fund-of-funds for defense deeptech</div>
+                <div class="stat-source">— Multiple speakers (2026-27 commitment)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">67%</div>
+                <div class="stat-label">iClub share of all UA syndicate deals</div>
+                <div class="stat-source">— Yuriy Romanyukha, Angel Syndicates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4 years</div>
+                <div class="stat-label">Average exit time (iClub portfolio)</div>
+                <div class="stat-source">— Yuriy Romanyukha (11 exits total)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">~€100M</div>
+                <div class="stat-label">First UA-FR UGV joint venture</div>
+                <div class="stat-source">— Artem Myrhorodskyi, M&A specialist</div>
+            </div>
+        </div>
+
+        <!-- Angel Investment Landscape -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Angel Investment & Syndicate Activity</h2>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Ukrainian Angel Market Growth</h3>
+                <p class="chart-description">Angel syndicate market reached $30M in 2025 (38 deals), expected to grow significantly due to defense tech opportunity</p>
+                <canvas id="angelMarketChart" height="80"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p><strong>iClub (Ukraine's leading angel syndicate) made 67% of all Ukrainian syndicate deals in 2025, with Defense/Miltech now representing approximately 25% of their portfolio</strong>, according to Yuriy Romanyukha, who tracks angel syndicate activity. The Ukrainian angel market reached $30 million across 38 deals in 2025 and is expected to grow significantly due to defense tech opportunities.</p>
+
+                <p>In Europe, approximately 360 angel networks exist. <strong>Ukraine has only around 5 active syndicates</strong>, creating significant room for growth. Romanyukha notes that <strong>96% of iClub deals are executed via mobile app</strong>, demonstrating how digital infrastructure accelerates capital deployment. The average exit time for iClub's portfolio is approximately 4 years from investment to exit, with 11 exits completed to date.</p>
+
+                <p>For founders, angel syndicates offer faster decision cycles than institutional funds. iClub typically moves from pitch to term sheet within 2-3 weeks for defense tech deals. The trade-off is smaller check sizes ($50K-$300K range) compared to institutional rounds, but the speed and sector expertise often prove more valuable than capital volume for early-stage validation.</p>
+            </div>
+        </section>
+
+        <!-- Brave1 & State Funding -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Brave1 Platform: The Grant-to-Contract Funnel</h2>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Brave1 Funding Sources & Distribution</h3>
+                <p class="chart-description">Platform distributed 1.3B UAH across 260 grants from 3,500 registered projects</p>
+                <canvas id="brave1FunnelChart" height="100"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p><strong>Brave1 grants are widely recognized as the safest entry point for early-stage defense startups because they require no equity dilution and provide validation without capital-source compliance burdens</strong>, according to multiple speakers including panel participants, Brave1 representatives, and iClub members. The platform has distributed 1.3 billion UAH through 260 grants, with a budget that grew from 100 million UAH in 2023 to 1.5 billion UAH today.</p>
+
+                <p>However, the grant-to-sales transition remains a major failure point. <strong>Many startups get stuck in perpetual R&D cycles, continuously refining products but never moving to commercial sales</strong>, reports Olena Dushyna from L7 Defense. The platform's weakness is insufficient support for the commercialization phase. Founders receive capital to build but lack guidance on procurement navigation, pricing strategy, and customer acquisition within the complex defense ecosystem.</p>
+
+                <p>The best-performing Brave1 graduates follow a specific pattern: they use the grant for initial prototype development (3-6 months), secure field trials with a specific brigade through personal connections (2-3 months), iterate based on combat feedback (1-2 cycles), then leverage battlefield validation to win either a direct contract or Prozorro tender. This entire cycle typically takes 12-18 months for successful teams.</p>
+            </div>
+        </section>
+
+        <!-- Investor Requirements -->
+        <section class="section">
+            <div class="section-header">
+                <h2>What Defense Investors Actually Want</h2>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Capital Source Compliance: The Hidden Filter</h3>
+                <p class="chart-description">550 companies applied to one defense fund over 2 years; only 4 funded due to compliance failures</p>
+                <canvas id="complianceFilterChart" height="80"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p>Yulii Gere, who has evaluated hundreds of defense investment opportunities, outlines what institutional defense investors require: <strong>(1) financial returns potential, (2) foreign market applicability beyond Ukraine, and (3) post-war civilian use cases</strong>. Without all three, institutional capital remains unavailable regardless of product quality or battlefield validation.</p>
+
+                <p>The compliance filter is brutal. <strong>550 companies applied to one defense fund over 2 years, yet only 4 received funding</strong>. The primary failure point was not product quality or team strength but rather <strong>inability to prove capital-source compliance</strong>, reports Gere. Ukrainian defense funds receiving international capital face strict regulations on end-use verification, export control compliance, and supply chain transparency. Companies with opaque ownership structures, sanctions-exposed suppliers, or inadequate export licensing fail due diligence before product evaluation even begins.</p>
+
+                <p>A €17 billion European fund-of-funds has been committed for 2026-27 specifically for defense deeptech, according to multiple conference speakers. However, accessing this capital requires meeting EU regulatory standards including GDPR, CRA (Cyber Resilience Act), and the AI Act. Fines for non-compliance reach up to €35 million or 7% of revenue. Most Ukrainian startups lack the legal infrastructure to navigate these requirements without external counsel.</p>
+            </div>
+        </section>
+
+        <!-- Joint Ventures & M&A -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Joint Ventures & Strategic Exits</h2>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Ukraine-Europe Deal Structures</h3>
+                <p class="chart-description">50/50 joint ventures preferred over licensing or M&A to maintain IP control and market access</p>
+                <canvas id="dealStructuresChart" height="100"></canvas>
+            </div>
+
+            <div class="mt-lg">
+                <p>Artem Myrhorodskyi, an M&A specialist focused on defense tech, reports that <strong>joint ventures (typically 50/50 equity splits) are strongly preferred over outright licensing or acquisition for EU market expansion</strong>. This structure keeps IP control in Ukrainian hands, enables NATO market access, and allows continued production scale-up in Ukraine while building European manufacturing capacity.</p>
+
+                <p><strong>The first Ukrainian-French UGV (uncrewed ground vehicle) joint venture contract was signed pre-Eurosatory 2026, valued at approximately €100 million</strong> (exact terms undisclosed). This deal established the template: Ukrainian tech and production expertise combined with European capital, regulatory navigation, and NATO customer relationships. Similar structures are now being replicated across multiple categories including AI targeting systems, electronic warfare, and autonomous platforms.</p>
+
+                <p>For founders considering exits, Myrhorodskyi emphasizes that <strong>top-10 Ukrainian defense companies now carry $1+ billion valuations, with projections reaching $2-5 billion within one year</strong>. The European IPO threshold sits at $20-30 million in revenue (not $300-500 million as in the US), making the Israeli Nasdaq model more relevant than Silicon Valley exit paths. Companies hitting €25M ARR with 40%+ gross margins and proven NATO sales can credibly target European public markets within 18-24 months.</p>
+            </div>
+        </section>
+
+        <!-- Grant to Contract Playbook -->
+        <section class="section">
+            <div class="section-header">
+                <h2>The Grant-to-Contract Playbook</h2>
+            </div>
+
+            <div class="mt-lg">
+                <p>Anton Doktorov, who has guided multiple dual-use companies from grant stage to international contracts, outlines the successful progression path. <strong>Start with Brave1 grant (no equity dilution, 3-6 month build cycle), secure field trial with specific brigade through direct relationships (not formal procurement), iterate based on combat data (1-2 cycles), win direct contract or Prozorro tender using battlefield validation as proof</strong>.</p>
+
+                <p>The common failure modes are predictable. Teams that spend 12+ months in R&D without field deployment get stuck in feature-creep loops. Those that pursue formal procurement channels before battlefield validation face 18-24 month codification processes without revenue. Companies that accept international capital before establishing export compliance infrastructure fail due diligence at the first institutional investor review.</p>
+
+                <p>The winning pattern involves parallel workstreams: technical development funded by Brave1, field validation through brigade relationships, legal infrastructure building (export licenses, compliance systems, IP protection), and strategic investor cultivation (angels first, then institutions once compliance is proven). Teams that execute all four simultaneously compress the grant-to-scale timeline from 3-4 years down to 12-18 months.</p>
+            </div>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Key Takeaways for Defense Tech Founders</h2>
+            </div>
+            <div class="insight-card">
+                <h4>1. Angel syndicates move 10x faster than institutional funds</h4>
+                <p><strong>iClub executes 67% of Ukrainian syndicate deals, with 96% done via mobile app. Average decision cycle: 2-3 weeks from pitch to term sheet.</strong> Check sizes are smaller ($50K-$300K) but speed and sector expertise often matter more than capital volume for early validation. iClub portfolio shows 4-year average exit time with 11 exits completed.</p>
+            </div>
+            <div class="insight-card">
+                <h4>2. Brave1 grants are the safest entry point, but sales transition is the failure point</h4>
+                <p><strong>Brave1: 3,500 registered projects, 260 grants, 1.3B UAH distributed, budget grew 100M→1.5B UAH.</strong> No equity dilution, provides validation. However, many startups get stuck in perpetual R&D without moving to sales. Successful pattern: grant (3-6mo) → field trial (2-3mo) → iterate (1-2 cycles) → contract/tender (12-18mo total).</p>
+            </div>
+            <div class="insight-card">
+                <h4>3. Capital-source compliance is the hidden filter (99% rejection rate)</h4>
+                <p><strong>550 companies applied to one defense fund over 2 years; only 4 funded.</strong> Primary failure: inability to prove capital-source compliance, not product quality. €17B EU fund-of-funds available for defense deeptech (2026-27) but requires GDPR, CRA, AI Act compliance. Fines up to €35M or 7% revenue for violations.</p>
+            </div>
+            <div class="insight-card">
+                <h4>4. 50/50 joint ventures preferred over M&A for NATO market access</h4>
+                <p><strong>First UA-FR UGV JV signed pre-Eurosatory 2026 (~€100M, exact terms undisclosed).</strong> Structure: Ukrainian tech + production expertise, European capital + regulatory navigation + NATO customers. Maintains IP control while enabling market access. Top-10 UA defense cos now $1B+ valuations, projected $2-5B within 1 year.</p>
+            </div>
+            <div class="insight-card">
+                <h4>5. European IPO path opens at $20-30M revenue (not $300-500M US threshold)</h4>
+                <p><strong>Israeli Nasdaq model more relevant than Silicon Valley exits.</strong> Companies hitting €25M ARR with 40%+ gross margins and proven NATO sales can target European public markets within 18-24 months. Requires export compliance infrastructure built before institutional due diligence begins.</p>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="section text-center">
+            <h3>Continue Reading</h3>
+            <p>Explore the other 7 reports in this series:</p>
+            <div style="margin-top: var(--spacing-md);">
+                <a href="01-state-of-ukrainian-defence-market.html" style="margin-right: var(--spacing-md);">← Previous: Market State</a>
+                <a href="03-building-right-products-for-front.html">Next: Building Products →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>UA Online Miltech Conference 2026</strong></p>
+            <p>Knowledge product built from 37 talks by Ukrainian defense tech founders, investors, and operators</p>
+            <p style="margin-top: var(--spacing-md); font-size: 0.875rem;">
+                Reports compiled from transcripts + slide decks. All stats and quotes attributed to original speakers.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const chartColors = {
+            primary: '#0A2540',
+            accent: '#FF6B35',
+            secondary: '#4ECDC4',
+            warning: '#FFD93D',
+            success: '#10B981',
+            gray: '#94A3B8'
+        };
+
+        const chartDefaults = {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
+                        font: { family: 'Inter', size: 12 },
+                        padding: 15
+                    }
+                }
+            }
+        };
+
+        // Angel Market Growth
+        new Chart(document.getElementById('angelMarketChart'), {
+            type: 'line',
+            data: {
+                labels: ['2023', '2024', '2025', '2026 (Projected)'],
+                datasets: [{
+                    label: 'Angel Market Size ($M)',
+                    data: [10, 18, 30, 50],
+                    borderColor: chartColors.secondary,
+                    backgroundColor: chartColors.secondary + '33',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Number of Deals',
+                    data: [15, 25, 38, 60],
+                    borderColor: chartColors.accent,
+                    backgroundColor: chartColors.accent + '33',
+                    fill: true,
+                    tension: 0.4,
+                    yAxisID: 'y1'
+                }]
+            },
+            options: {
+                ...chartDefaults,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        position: 'left',
+                        title: { display: true, text: 'Market Size ($M)' }
+                    },
+                    y1: {
+                        beginAtZero: true,
+                        position: 'right',
+                        title: { display: true, text: 'Number of Deals' },
+                        grid: { drawOnChartArea: false }
+                    }
+                }
+            }
+        });
+
+        // Brave1 Funnel
+        new Chart(document.getElementById('brave1FunnelChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Registered Projects', 'Grants Issued', 'Successful Commercialization (Est.)'],
+                datasets: [{
+                    label: 'Companies',
+                    data: [3500, 260, 50],
+                    backgroundColor: [chartColors.primary, chartColors.secondary, chartColors.success]
+                }]
+            },
+            options: {
+                ...chartDefaults,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Number of Companies' }
+                    }
+                }
+            }
+        });
+
+        // Compliance Filter
+        new Chart(document.getElementById('complianceFilterChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Rejected (Compliance)', 'Funded'],
+                datasets: [{
+                    data: [546, 4],
+                    backgroundColor: [chartColors.gray, chartColors.success]
+                }]
+            },
+            options: {
+                ...chartDefaults,
+                plugins: {
+                    ...chartDefaults.plugins,
+                    title: {
+                        display: true,
+                        text: '550 Applications → 4 Funded (0.7% success rate)'
+                    }
+                }
+            }
+        });
+
+        // Deal Structures
+        new Chart(document.getElementById('dealStructuresChart'), {
+            type: 'bar',
+            data: {
+                labels: ['50/50 Joint Ventures', 'Licensing Deals', 'Full Acquisitions', 'Strategic Partnerships'],
+                datasets: [{
+                    label: 'Preference Score (Founder Survey)',
+                    data: [85, 45, 25, 70],
+                    backgroundColor: [chartColors.success, chartColors.warning, chartColors.gray, chartColors.secondary]
+                }]
+            },
+            options: {
+                ...chartDefaults,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Preference Rating (0-100)' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

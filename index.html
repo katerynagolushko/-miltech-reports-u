@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukrainian Defense Tech Intelligence | Miltech Conference 2026</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .hero {
+            background: linear-gradient(135deg, #0A2540 0%, #1A3A5A 50%, #0A2540 100%);
+            color: white;
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero .description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4ECDC4 0%, #FFD93D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.5rem;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .report-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .report-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .report-card-header {
+            padding: 2rem 2rem 1rem;
+        }
+
+        .report-number {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .report-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .report-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .report-highlights {
+            padding: 0 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+
+        .highlight-icon {
+            color: var(--success);
+            font-weight: 700;
+            margin-top: 0.1rem;
+        }
+
+        .report-footer {
+            padding: 0 2rem 2rem;
+        }
+
+        .report-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+
+        .report-link:hover {
+            background: var(--accent-hover);
+            color: white;
+        }
+
+        .about-section {
+            background: var(--gray-100);
+            padding: 4rem 0;
+            margin-top: 4rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .methodology {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .method-item {
+            text-align: center;
+        }
+
+        .method-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .method-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 4rem 0 3rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="container hero-content">
+            <h1>Ukrainian Defense Tech Intelligence</h1>
+            <p class="subtitle">How Ukraine is reshaping global defense innovation</p>
+            <p class="description">
+                Comprehensive analysis from the UA Online Miltech Conference 2026.
+                37 talks by Ukrainian defense tech founders, investors, and military operators.
+                Data-driven insights on market dynamics, funding, product development, and export strategy.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">8</div>
+                    <div class="hero-stat-label">Research Reports</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">37</div>
+                    <div class="hero-stat-label">Expert Speakers</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">150+</div>
+                    <div class="hero-stat-label">Non-Googleable Insights</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">25+</div>
+                    <div class="hero-stat-label">Data Visualizations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section style="margin: 4rem 0 2rem;">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">Explore the Reports</h2>
+
+            <div class="reports-grid">
+                <!-- Report 1 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 01</div>
+                        <h3 class="report-title">State of the Ukrainian Defence Market</h3>
+                        <p class="report-description">
+                            How Ukraine became the world's largest defense tech testing ground
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>5-10M drones produced annually (no other country at scale)</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>6-month innovation cycles vs. 5-7 years in Europe</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>$100B defense budget, 3,500 Brave1 projects</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="01-state-of-ukrainian-defence-market.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 2 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 02</div>
+                        <h3 class="report-title">Funding and Deals in Defence Tech</h3>
+                        <p class="report-description">
+                            From Brave1 grants to €100M joint ventures: navigating capital
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>iClub: 67% of all UA syndicate deals, 4-year avg exit</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>€17B EU fund-of-funds for defense deeptech (2026-27)</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>550 applications → 4 funded (compliance filter)</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="02-funding-deals-defence-tech.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 3 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 03</div>
+                        <h3 class="report-title">Building the Right Products for the Front</h3>
+                        <p class="report-description">
+                            What the front needs: criteria framework from operators
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Field validation requirements from combat units</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Product-market fit in 6-month cycles</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>R&D methodologies under rapid growth</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="03-building-right-products-for-front.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 4 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 04</div>
+                        <h3 class="report-title">AI on the Battlefield</h3>
+                        <p class="report-description">
+                            Defense AI maturity and why field models fail
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>What Ukraine builds vs. what NATO buys (gap analysis)</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>AI categories: Autonomy, Intelligence, Backend, C2</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Why neural networks stop working in combat</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="04-ai-on-battlefield.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 5 -->
+                <div class="report-card" style="border-top-color: var(--secondary);">
+                    <div class="report-card-header">
+                        <div class="report-number" style="color: var(--secondary);">Report 05 — FLAGSHIP</div>
+                        <h3 class="report-title">Selling to the Ukrainian State</h3>
+                        <p class="report-description">
+                            MoD insider playbook: real stakeholders, decisions, and procurement channels
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">★</span>
+                            <span>Oleksa Boyko's insider framework from inside MoD</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">★</span>
+                            <span>6 parallel procurement channels + engagement cadence</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">★</span>
+                            <span>How projects actually start ("WhatsApp group created")</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="05-selling-to-ukrainian-state.html" class="report-link" style="background: var(--secondary);">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 6 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 06</div>
+                        <h3 class="report-title">Positioning Ukraine-Proven Tech for NATO/EU</h3>
+                        <p class="report-description">
+                            Why Ukrainian products don't map to Western procurement (and how to adapt)
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Ukraine: 1-12mo cycles, bottom-up. West: 3-10yr, top-down</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Computer vision vs. wargaming: the procurement gap</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Export approval: 75-80% rate, bilateral frameworks</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="06-exporting-ukrainian-defence-tech.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 7 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 07</div>
+                        <h3 class="report-title">Hiring and Keeping Defence Talent</h3>
+                        <p class="report-description">
+                            Retention drivers and talent shortage realities
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>People stay for influence, not motivation (Skrynnikov)</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>How miltech companies break their own hiring</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>AI agents compensating for staff shortages</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="07-hiring-keeping-defence-talent.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Report 8 -->
+                <div class="report-card">
+                    <div class="report-card-header">
+                        <div class="report-number">Report 08</div>
+                        <h3 class="report-title">Ukrainian Tax, Law and Staff Mobilization</h3>
+                        <p class="report-description">
+                            Defence City vs. Diia City + mobilization reservation rules
+                        </p>
+                    </div>
+                    <div class="report-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>VAT exemption qualification checklist</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Defence City vs. Diia City comparison (Mikhailenko)</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">✓</span>
+                            <span>Critical-enterprise status requirements (Dukhnytskyi)</span>
+                        </div>
+                    </div>
+                    <div class="report-footer">
+                        <a href="08-ukrainian-tax-law-mobilization.html" class="report-link">
+                            Read Report →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Preview Section -->
+        <section style="background: var(--gray-100); margin: 4rem calc(-50vw + 50%) 0; padding: 3rem calc(50vw - 50%);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Sample Data Visualizations</h2>
+                <p style="text-align: center; color: var(--gray-700); max-width: 600px; margin: 0 auto 3rem;">
+                    Every insight backed by field numbers, insider frameworks, and battlefield data from Ukrainian defense tech operators.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                    <!-- Preview 1: Innovation Cycle -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-md); cursor: pointer;" onclick="window.location.href='01-state-of-ukrainian-defence-market.html'">
+                        <h4 style="font-size: 0.95rem; color: var(--gray-700); margin-bottom: 1rem; text-align: center;">Innovation Cycle Speed</h4>
+                        <canvas id="previewChart1" height="120"></canvas>
+                        <p style="font-size: 0.8rem; color: var(--gray-500); text-align: center; margin-top: 0.75rem;">Report 1: Market State</p>
+                    </div>
+
+                    <!-- Preview 2: Funding Funnel -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-md); cursor: pointer;" onclick="window.location.href='02-funding-deals-defence-tech.html'">
+                        <h4 style="font-size: 0.95rem; color: var(--gray-700); margin-bottom: 1rem; text-align: center;">Brave1 Funding Funnel</h4>
+                        <canvas id="previewChart2" height="120"></canvas>
+                        <p style="font-size: 0.8rem; color: var(--gray-500); text-align: center; margin-top: 0.75rem;">Report 2: Funding & Deals</p>
+                    </div>
+
+                    <!-- Preview 3: Procurement Gap -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-md); cursor: pointer;" onclick="window.location.href='04-ai-on-battlefield.html'">
+                        <h4 style="font-size: 0.95rem; color: var(--gray-700); margin-bottom: 1rem; text-align: center;">Ukraine vs NATO AI Investment</h4>
+                        <canvas id="previewChart3" height="120"></canvas>
+                        <p style="font-size: 0.8rem; color: var(--gray-500); text-align: center; margin-top: 0.75rem;">Report 4: AI on Battlefield</p>
+                    </div>
+
+                    <!-- Preview 4: Budget Growth -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: var(--shadow-md); cursor: pointer;" onclick="window.location.href='01-state-of-ukrainian-defence-market.html'">
+                        <h4 style="font-size: 0.95rem; color: var(--gray-700); margin-bottom: 1rem; text-align: center;">Defense Budget Growth</h4>
+                        <canvas id="previewChart4" height="120"></canvas>
+                        <p style="font-size: 0.8rem; color: var(--gray-500); text-align: center; margin-top: 0.75rem;">Report 1: Market State</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px; max-width: 700px; margin-left: auto; margin-right: auto; box-shadow: var(--shadow-md);">
+                    <h3 style="margin-bottom: 1rem; color: var(--primary); text-align: center;">Why This Intelligence Matters</h3>
+                    <p style="text-align: center; color: var(--gray-700); font-size: 0.95rem; line-height: 1.7;">
+                        <strong>Non-googleable field data</strong> from Ukrainian defense tech founders, MoD insiders, and military operators.
+                        Real procurement timelines, actual approval rates, insider stakeholder maps, and battlefield-proven frameworks.
+                        All insights attributed to named sources with roles and companies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+        <script>
+            // Preview Chart 1: Innovation Cycle
+            new Chart(document.getElementById('previewChart1'), {
+                type: 'bar',
+                data: {
+                    labels: ['Ukraine', 'Europe'],
+                    datasets: [{
+                        data: [6, 66],
+                        backgroundColor: ['#FF6B35', '#94A3B8']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { display: false },
+                        y: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // Preview Chart 2: Brave1 Funnel
+            new Chart(document.getElementById('previewChart2'), {
+                type: 'bar',
+                data: {
+                    labels: ['Registered', 'Grants', 'Commercial'],
+                    datasets: [{
+                        data: [3500, 260, 50],
+                        backgroundColor: ['#0A2540', '#4ECDC4', '#10B981']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { display: false },
+                        x: { ticks: { font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // Preview Chart 3: AI Procurement Gap
+            new Chart(document.getElementById('previewChart3'), {
+                type: 'bar',
+                data: {
+                    labels: ['Computer Vision', 'Wargaming'],
+                    datasets: [
+                        { label: 'Ukraine', data: [95, 10], backgroundColor: '#FF6B35' },
+                        { label: 'NATO', data: [70, 95], backgroundColor: '#4ECDC4' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: { font: { size: 9 }, boxWidth: 12 }
+                        }
+                    },
+                    scales: {
+                        y: { display: false },
+                        x: { ticks: { font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // Preview Chart 4: Budget Growth
+            new Chart(document.getElementById('previewChart4'), {
+                type: 'line',
+                data: {
+                    labels: ['2023', '2024', '2025', '2026'],
+                    datasets: [{
+                        data: [40, 60, 80, 100],
+                        borderColor: '#FF6B35',
+                        backgroundColor: '#FF6B3533',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { display: false },
+                        x: { ticks: { font: { size: 9 } } }
+                    }
+                }
+            });
+        </script>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Ukrainian Defense Tech Intelligence</strong></p>
+            <p>Field-tested insights from defense tech founders, MoD insiders, and military operators</p>
+            <div class="footer-links">
+                <a href="01-state-of-ukrainian-defence-market.html">Start Reading</a>
+            </div>
+            <p style="margin-top: var(--spacing-md); font-size: 0.875rem;">
+                All insights attributed to named sources. Data verified and cross-referenced.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
